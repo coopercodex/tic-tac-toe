@@ -37,7 +37,7 @@ header {
 
 .referee {
   display: flex;
-  /* margin-bottom: 500px; */
+  font-size: xx-large;
 }
 
 .player-container {
@@ -52,16 +52,50 @@ header {
 
 .red-container {
   background-color: red;
+  opacity: 75%;
 }
 
 
 .blue-container {
   background-color: blue;
+  opacity: 75%;
 }
 
 .game-board {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   height: 500px;
   width: 500px;
-  background-color: blueviolet;
+  /* border: 1px solid black; */
 }
+
+.game-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 164.5px;
+  width: 164.5px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+#box3 {
+  border-right: none;
+}
+
+#box6 {
+  border-right: none;
+}
+
+#box7 {
+  border-bottom: none;
+}
+#box8 {
+  border-bottom: none;
+}
+
+#box9 {
+  border-right: none;
+  border-bottom: none;
+}
+
