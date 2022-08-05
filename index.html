@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,44 @@
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Your Choice</h1>
+  <header class="header">
+    <h1>Who Will Win</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW0ENYlCfuTjKVTel5ZlAKz3arhbK9_eU1sg&usqp=CAU"
+      alt="morpheus">
   </header>
-  <section class="game-box">
-    <aside class="red-pill-header">
-      <h2>Red Pill</h2>
-      <div>0 wins</div>
-    </aside>
-    <main>
-      <h2 class="referee" id="referee">Blue Must Choose</h2>
-      <section class="game-board" id="game-board">
-        <div class="game-box1"></div>
-        <div class="game-box2"></div>
-        <div class="game-box3"></div>
-        <div class="game-box4"></div>
-        <div class="game-box5"></div>
-        <div class="game-box6"></div>
-        <div class="game-box7"></div>
-        <div class="game-box8"></div>
-        <div class="game-box9"></div>
-      </section>
-      <aside class="blue-pill-header">
+  <div class="main-container">
+    <section class="red-container player-container">
+      <div class="red-pill">
+        <h2>Red Pill</h2>
+        <div>0 wins</div>
+      </div>
+    </section>
+    <section class="game-column">
+      <h1 class="referee" id="referee">Blue Must Choose</h1>
+      <div class="game-board" id="game-board">
+        <div class="game-box1" id="box1"></div>
+        <div class="game-box2" id="box2"></div>
+        <div class="game-box3" id="box3"></div>
+        <div class="game-box4" id="box4"></div>
+        <div class="game-box5" id="box5"></div>
+        <div class="game-box6" id="box6"></div>
+        <div class="game-box7" id="box7"></div>
+        <div class="game-box8" id="box8"></div>
+        <div class="game-box9" id="box9"></div>
+      </div>
+    </section>
+    <section class="blue-container player-container">
+      <div class="blue-pill">
         <h2>Blue Pill</h2>
         <div>0 wins</div>
-      </aside>
-    </main>
-  </section>
-
-
-
-
-
-
-
-
-
+      </div>
+    </section>
+  </div>
   <script src="main.js"></script>
   <script src="game.js"></script>
   <script src="player.js"></script>
 </body>
+
 </html>
