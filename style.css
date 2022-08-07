@@ -17,6 +17,11 @@ header {
   text-align: center;
 }
 
+.morpheus-image {
+  width: 300px;
+  height: 250px;
+}
+
 .main-container {
   display: flex;
   align-items: center;
@@ -79,23 +84,33 @@ header {
   border-bottom: 1px solid black;
   margin: 0;
 }
-#box3 {
+#box2 {
+  border-right: none;
+}
+
+#box5 {
   border-right: none;
 }
 
 #box6 {
-  border-right: none;
+  border-bottom: none;
 }
-
 #box7 {
   border-bottom: none;
 }
+
 #box8 {
+  border-right: none;
   border-bottom: none;
 }
 
-#box9 {
-  border-right: none;
-  border-bottom: none;
+.red-pill-image {
+  height: 125px;
+  width: 75px;
+}
+.blue-pill-image {
+
+  height: 125px;
+  width: 75px;
 }
 
