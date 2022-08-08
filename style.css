@@ -80,10 +80,11 @@ header {
   align-items: center;
   height: 164.5px;
   width: 164.5px;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: 1px solid rgb(106, 231, 69);
+  border-bottom: 1px solid rgb(106, 231, 69);
   margin: 0;
 }
+
 #box2 {
   border-right: none;
 }
@@ -95,6 +96,7 @@ header {
 #box6 {
   border-bottom: none;
 }
+
 #box7 {
   border-bottom: none;
 }
@@ -108,9 +110,9 @@ header {
   height: 125px;
   width: 75px;
 }
+
 .blue-pill-image {
 
   height: 125px;
   width: 75px;
 }
-
