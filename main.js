@@ -33,7 +33,6 @@ function resetGame() {
   redPillWins.innerHTML = `Wins: ${startGame.redPlayer.wins}`;
   bluePillWins.innerHTML = `Wins: ${startGame.bluePlayer.wins}`;
   startGame.resetData();
-  declareWinner();
   gameBoard.classList.remove('prevent-click');
 }
 
