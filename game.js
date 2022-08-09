@@ -32,19 +32,22 @@ class Game {
         if (this.currentPlayer.spaces.indexOf(winningCondition) >= 0) {
           winCount++;
           if (winCount === 3) {
-            this.winReset();
-            return true;
+            declareWinner();
+            this.gameReset('win');
           } else if (winCount !== 3 && !this.board.includes('')) {
             displayDraw();
+            this.gameReset('tie');
           }
         }
       }
     }
   }
 
-  winReset() {
-    this.currentPlayer.winner = true;
-    this.currentPlayer.wins++;
+  gameReset(gameStatus) {
+    if (gameStatus === 'win') {
+      this.currentPlayer.winner = true;
+      this.currentPlayer.wins++;
+    }
     setTimeout(resetGame, 500);
   }
 
