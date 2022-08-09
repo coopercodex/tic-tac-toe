@@ -2,12 +2,13 @@ class Game {
   constructor() {
     this.board = ['', '', '', '', '', '', '', '', ''];
     this.winConditions = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
-    this.redPlayer = new Player('R', 1);
-    this.bluePlayer = new Player('O', 2);
+    this.redPlayer = new Player('🔴', 1);
+    this.bluePlayer = new Player('🔵', 2);
     this.currentPlayer = this.redPlayer;
   }
 
   choosePlayer(id) {
+    displayTurn();
     this.board[id] = this.currentPlayer.token;
     if (this.currentPlayer === this.redPlayer) {
       this.currentPlayer = this.bluePlayer;
@@ -16,14 +17,14 @@ class Game {
     }
   }
 
+
   trackPlayerSpaces(i) {
-    console.log(i);
     this.currentPlayer.spaces.push(i);
-    console.log(this.currentPlayer.spaces);
     this.checkWin();
   }
 
-  checkWin(playerName) {
+  checkWin() {
+    console.log(this.board.includes(''));
     var winCount;
     for (var i = 0; i < this.winConditions.length; i++) {
       winCount = 0;
@@ -41,16 +42,17 @@ class Game {
   }
 
   winReset() {
+    this.currentPlayer.winner = true;
     this.currentPlayer.wins++;
-    declareWinner();
-    setTimeout(resetGame, 3000);
+    setTimeout(resetGame, 500);
+    console.log(this.currentPlayer.winner)
   }
+
   resetData() {
     this.board = ['', '', '', '', '', '', '', '', ''];
     this.redPlayer.spaces = [];
     this.bluePlayer.spaces = [];
   }
-
 }
 
 
