@@ -13,16 +13,14 @@ var startGame = new Game();
 gameBoard.addEventListener('click', markSpace);
 
 
-
 // functions
 function markSpace(event) {
-
   if (!event.target.innerText) {
     for (var i = 0; i < gameBox.length; i++) {
       if (gameBox[i].id === event.target.id) {
-        event.target.innerHTML = startGame.currentPlayer.token;
-        startGame.trackPlayerSpaces(i);
         startGame.choosePlayer(event.target.id);
+        startGame.trackPlayerSpaces(i);
+        event.target.innerHTML = startGame.currentPlayer.token;
       }
     }
   }
@@ -32,12 +30,24 @@ function resetGame() {
   for (var i = 0; i < gameBox.length; i++) {
     gameBox[i].innerHTML = "";
   }
-  redPillWins.innerHTML = startGame.redPlayer.wins;
-  bluePillWins.innerHTML = startGame.bluePlayer.wins;
+  redPillWins.innerHTML = `Wins: ${startGame.redPlayer.wins}`;
+  bluePillWins.innerHTML = `Wins: ${startGame.bluePlayer.wins}`;
   startGame.resetData();
+  declareWinner();
+  gameBoard.classList.remove('prevent-click');
 }
 
 function declareWinner() {
-  ref.innerHTML = `Winner ${startGame.currentPlayer.token}`
+  ref.innerHTML = `Winner is ${startGame.currentPlayer.token} Pill!`;
+  gameBoard.classList.add('prevent-click');
 }
+
+function displayTurn() {
+  ref.innerHTML = `${startGame.currentPlayer.token}! Must Choose`;
+}
+
+function displayDraw() {
+  ref.innerHTML = `It's a Draw!`;
+}
+
 
