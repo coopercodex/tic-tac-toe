@@ -17,14 +17,13 @@ class Game {
     }
   }
 
-
   trackPlayerSpaces(i) {
     this.currentPlayer.spaces.push(i);
+    this.board.shift();
     this.checkWin();
   }
 
   checkWin() {
-    console.log(this.board.includes(''));
     var winCount;
     for (var i = 0; i < this.winConditions.length; i++) {
       winCount = 0;
@@ -35,6 +34,8 @@ class Game {
           if (winCount === 3) {
             this.winReset();
             return true;
+          } else if (winCount !== 3 && !this.board.includes('')) {
+            displayDraw();
           }
         }
       }
@@ -45,7 +46,6 @@ class Game {
     this.currentPlayer.winner = true;
     this.currentPlayer.wins++;
     setTimeout(resetGame, 500);
-    console.log(this.currentPlayer.winner)
   }
 
   resetData() {
@@ -54,6 +54,8 @@ class Game {
     this.bluePlayer.spaces = [];
   }
 }
+
+
 
 
 
