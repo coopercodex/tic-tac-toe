@@ -8,6 +8,6 @@ class Player {
   }
 
   increaseWins() {
-    this.wins += 1;
+    this.wins ++;
   }
 }
