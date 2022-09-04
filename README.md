@@ -12,8 +12,7 @@
 
   ## Introduction
   
-  
-    Hello my name is Derek Cooper and i implemented javascript, Html and Css to complete this project. This game of tic-tac-toe utilizes my understanding     of class to class interaction to make a fully functional game!
+  Hello my name is Derek Cooper and i implemented javascript, Html and Css to complete this project. This game of tic-tac-toe utilizes my understanding of class to class interaction to make a fully functional game!
 
     This was my final project for Mod 1 in Turing School of Software and Design.
 
